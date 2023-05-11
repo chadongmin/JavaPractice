@@ -12,10 +12,21 @@ public class MakePrint {
         //String을 조합할때 + 연산자를 쓰면 메모리가 계속 새기 때문에
         //StringBuffer를 사용해서 효율적으로 사용한다.
     }
-    private void makeBody(){
-        buffer.append("james \t");
-        buffer.append("korea \t");
-        buffer.append("010-1111-2222\n");
+//    private void makeBody(){
+//        buffer.append("james \t");
+//        buffer.append("korea \t");
+//        buffer.append("010-1111-2222\n");
+//    }
+    private class MakeBody{
+        private String generateBody(){
+            StringBuffer buffer = new StringBuffer();
+            buffer.append("james \t");
+            buffer.append("korea \t");
+            buffer.append("010-1111-2222\n");
+            return buffer.toString();
+        }
+
+
     }
     private void makeTail(){
         buffer.append(line);
@@ -23,7 +34,13 @@ public class MakePrint {
     public String makePrint(String companyName){
         if(companyName.equals("ABC")){
             makeHeader();
-            makeBody();
+            //case 1:
+            //makebody();
+
+            //case 2: inner class
+            MakeBody makeBody = new MakeBody();
+            buffer.append(makeBody.generateBody());
+
             makeTail();
             return buffer.toString();
         }
