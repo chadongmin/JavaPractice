@@ -44,9 +44,6 @@ public class Bank {
         private String[] history = new String[2];
         private int historyIndex;
 
-        //잔액 조회를 위해 AppMain에서 생성자를 통해 Account클래스로 접근하기 위해 기본생성자 생성
-        public Account(){}
-
         private Account(int accountNum, int balance){
             this.accountNum = accountNum;
             this.balance = balance;
