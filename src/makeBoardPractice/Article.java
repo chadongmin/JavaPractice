@@ -39,8 +39,8 @@ public class Article {
     public String toString() {
         return "게시글 {\n" +
                 "작성자 정보 =" + getUserName() +'|' +getUserEmail()+
-                "\n글 내용 ='" + contents + '\'' +
                 "\n글 제목 ='" + title + '\'' +
+                "\n글 내용 ='" + contents + '\'' +
                 "\n댓글 내용=" + Arrays.toString(getComments()) +
                 '}';
     }
