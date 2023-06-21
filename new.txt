@@ -1,0 +1,2 @@
+ram=20m
+cpu=4core
